@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="post">{% csrf_token %}
+
+        <th>title:</th>
+        <th>
+            <input type="text" id="id_title" name="title">
+        </th>
+
+        <tr>
+            <th>content:</th>
+            <th>
+                <input type="text" id="id_content" name="content">
+            </th>
+        </tr>
+        <input type="submit" value="上传">
+
+    </form>
+
+{% endblock %}

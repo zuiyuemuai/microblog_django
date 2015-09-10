@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <form  action="" method="post"> {% csrf_token %}
+        <tr>
+            <th>
+                <label for="id_name">Name:</label>
+            </th>
+            <th>
+                <input id="id_name" type="text" name="name" maxlength="64">
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                <label for="id_email">Email:</label>
+            </th>
+            <th>
+                <input id="id_email" type="text" name="email" maxlength="64">
+            </th>
+        </tr>
+
+        <tr>
+            <input type="submit" value="提交">
+        </tr>
+
+    </form>
+
+
+{% endblock %}

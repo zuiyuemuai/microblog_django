@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Wecome !</h1>
+
+    {% ifequal login True%}
+        <h1><a href="/write">  {{ name }}   </a> </h1>
+
+        <hr>
+
+        {% for v in contents %}
+        <th>
+            {{ v.title}}:
+            {{ v.content }}
+        </th><hr>
+        {% endfor %}
+
+    {% else %}
+        <a href="/login"> login </a>
+    {% endifequal %}
+
+
+{% endblock %}
